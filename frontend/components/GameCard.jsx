@@ -29,7 +29,7 @@ export default function GameCard(props) {
             <b>{props.name}</b>
           </Typography>
           <Typography variant="body1" color="silver">
-            <b>Your Score: {props.score}/10</b>
+            <b>Your Rating: {props.rating}/10</b>
           </Typography>
         </CardContent>
       </CardActionArea>
