@@ -5,7 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
-export default function GameCard() {
+export default function GameCard(props) {
   return (
     <Card
       sx={{
@@ -21,15 +21,15 @@ export default function GameCard() {
         <CardMedia
           component="img"
           height="150"
-          image="	https://media.rawg.io/media/crop/600/400/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg"
-          alt="green iguana"
+          image={props.imageUrl}
+          alt="game image"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            <b>Witcher 3</b>
+            <b>{props.name}</b>
           </Typography>
-          <Typography variant="body2" color="silver">
-            Great game i guess
+          <Typography variant="body1" color="silver">
+            <b>Your Score: {props.score}/10</b>
           </Typography>
         </CardContent>
       </CardActionArea>
