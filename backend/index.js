@@ -20,7 +20,8 @@ app.post('/home', async (req, res) => {
     let createPayload = req.body;
     await gameModel.create({
         name: createPayload.name,
-        imageUrl: createPayload.imageUrl
+        imageUrl: createPayload.imageUrl,
+        rating: createPayload.rating
     })
     res.json({
         msg: 'game added successfully'

@@ -13,6 +13,7 @@ mongoose.connect(
 const gameSchema = mongoose.Schema({
   name: String,
   imageUrl: String,
+  rating: String,
 });
 const gameModel = mongoose.model("gameModel", gameSchema);
 module.exports = {
