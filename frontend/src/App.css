@@ -3,23 +3,30 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .input-box {
+  width: 200px;
+  height: auto;
   align-items: center;
-   position: fixed; 
-  bottom: 20%;
-  right: 10%;
-  /* backdrop-filter: blur(100px); */
-  background-color: rgb(86, 103, 117);
-  padding: 2px;
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  backdrop-filter: blur(20px);
+  /* background-color: rgb(79, 35, 160); */
+  border-radius: 20px;
+  padding: 6px;
+  color: white;
 }
 
 #form {
-
   display: flex;
   flex-direction: column;
-  /* padding: 40px; */
+}
+input {
+  padding: 4px;
+  margin: 4px;
+  border-radius: 6px;
 }

@@ -3,18 +3,19 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
+import { Button, CardActionArea, IconButton } from "@mui/material";
 
-export default function GameCard(props) {
+//using react.memo to stop everything to rerender
+export default React.memo(function GameCard(props) {
   return (
     <Card
       sx={{
         width: 220,
         fontWeight: "bold",
         margin: 2,
-        color:'white',
-        background:"black",
-        borderRadius:3
+        color: "white",
+        background: "black",
+        borderRadius: 3,
       }}
     >
       <CardActionArea>
@@ -32,7 +33,16 @@ export default function GameCard(props) {
             <b>Your Rating: {props.rating}/10</b>
           </Typography>
         </CardContent>
+        <Button
+          color="error"
+          variant="contained"
+          onClick={() => {
+            alert("btn clicked");
+          }}
+        >
+          <b>Delete</b>
+        </Button>
       </CardActionArea>
     </Card>
   );
-}
+});

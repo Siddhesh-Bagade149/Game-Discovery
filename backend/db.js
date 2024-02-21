@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
-mongoose.connect(
+mongoose
+  .connect(
     "mongodb+srv://siddhesh:CNwdQmdIvwcOGoGb@cluster0.rbwuu52.mongodb.net/gameData"
   )
   .then(() => {
@@ -11,6 +12,7 @@ mongoose.connect(
   });
 
 const gameSchema = mongoose.Schema({
+  id: Number,
   name: String,
   imageUrl: String,
   rating: String,
