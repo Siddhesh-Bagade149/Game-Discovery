@@ -3,10 +3,10 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, IconButton } from "@mui/material";
+import { Button, CardActionArea, } from "@mui/material";
 
 //using react.memo to stop everything to rerender
-export default React.memo(function GameCard(props) {
+export default (function GameCard(props) {
   return (
     <Card
       sx={{
@@ -37,7 +37,13 @@ export default React.memo(function GameCard(props) {
           color="error"
           variant="contained"
           onClick={() => {
-            alert("btn clicked");
+            alert(this.id);
+            // fetch("http://localhost:3000/home",{
+            //   method:"DELETE",
+            //   body:JSON.stringify({
+            //     id:this.id
+            //   })
+            // })
           }}
         >
           <b>Delete</b>

@@ -31,14 +31,10 @@ app.post('/home', async (req, res) => {
 })
 
 app.delete('/home',async (req,res)=>{
-    // let delId=req.body.id;
-    // await gameModel.findOneAndDelete(({id:delId}),(err,data)=>{
-    //     if(err){
-    //         res.send('error:'+err)
-    //     }
-    //     res.send('deleted:'+data)
-    // })
-    res.send('inside delete')
+    let delId=req.body.id;
+    await gameModel.deleteOne(({id:delId}))
+    res.send('deleted id:'+delId)
+
 })
 
 //delete functionality with model.deleteOne()
